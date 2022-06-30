@@ -24,14 +24,14 @@ html {
   caret-color: var(--inputCaretColor);
 }
 
-.olumJsonEditor {
+.olumJson {
   padding: 20px;
   padding-left: 5px;
   margin: 0 auto;
   user-select: none;
 }
 
-.olumJsonEditor div.line {
+.olumJson div.line {
   font-size: 20px;
   padding: 3px;
   border-radius: 3px;
@@ -39,11 +39,11 @@ html {
   box-sizing: border-box;
 }
 
-.olumJsonEditor .caret {
+.olumJson .caret {
   position: relative;
 }
 
-.olumJsonEditor .caret .indentation {
+.olumJson .caret .indentation {
   position: absolute;
   left: 20px;
   top: 30px;
@@ -56,20 +56,20 @@ html {
   box-shadow: 1px 0 0 0 rgba(78, 85, 121, 0.44) inset;
 }
 
-.olumJsonEditor .caret .indentation[data-indent="0"] {
+.olumJson .caret .indentation[data-indent="0"] {
   background: rgba(56, 60, 63, var(--indentBgOpacity));
 }
-.olumJsonEditor .caret .indentation[data-indent="1"] {
+.olumJson .caret .indentation[data-indent="1"] {
   background: rgba(47, 60, 67, var(--indentBgOpacity));
 }
-.olumJsonEditor .caret .indentation[data-indent="2"] {
+.olumJson .caret .indentation[data-indent="2"] {
   background: rgba(56, 51, 76, var(--indentBgOpacity));
 }
-.olumJsonEditor .caret .indentation[data-indent="3"] {
+.olumJson .caret .indentation[data-indent="3"] {
   background: rgba(44, 59, 75, var(--indentBgOpacity));
 }
 
-.olumJsonEditor div.line .removeProp {
+.olumJson div.line .removeProp {
   height: 22px;
   border: 1px solid var(--removePropBtnBgColor);
   background: var(--removePropBtnBgColor);
@@ -86,50 +86,50 @@ html {
   visibility: hidden;
 }
 
-.olumJsonEditor div.line .removeProp svg {
+.olumJson div.line .removeProp svg {
   pointer-events: none;
 }
 
-.olumJsonEditor div.line:hover {
+.olumJson div.line:hover {
   background: var(--bgHoverColor);
   transition: background 0.1s ease-in-out, height 0.3s ease-in-out;
 }
 
-.olumJsonEditor div.line:hover .collapse {
+.olumJson div.line:hover .collapse {
   /* background: var(--bgHoverColor); */
 }
 
-.olumJsonEditor div.line:hover .removeProp {
+.olumJson div.line:hover .removeProp {
   visibility: visible;
   transition: visibility 0.1s ease-in-out;
 }
 
-.olumJsonEditor span.prop {
+.olumJson span.prop {
   color: var(--propColor);
   user-select: text;
 }
 
-.olumJsonEditor .colon {
+.olumJson .colon {
   color: var(--colonColor);
   padding: 0 3px;
   margin-right: 5px;
 }
 
-.olumJsonEditor .saveBtn {
+.olumJson .saveBtn {
   position: relative;
   margin: 0 0 0 10px;
   transition: none;
   opacity: 0;
 }
-.olumJsonEditor .string:hover .saveBtn,
-.olumJsonEditor .boolean:hover .saveBtn,
-.olumJsonEditor .number:hover .saveBtn,
-.olumJsonEditor .null:hover .saveBtn,
-.olumJsonEditor .undefined:hover .saveBtn {
+.olumJson .string:hover .saveBtn,
+.olumJson .boolean:hover .saveBtn,
+.olumJson .number:hover .saveBtn,
+.olumJson .null:hover .saveBtn,
+.olumJson .undefined:hover .saveBtn {
   opacity: 1;
 }
 
-.olumJsonEditor .saveBtn::after {
+.olumJson .saveBtn::after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="%233bea49"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>');
   left: 0;
   top: 0;
@@ -138,24 +138,24 @@ html {
   text-align: center;
 }
 
-.olumJsonEditor .addBtn {
+.olumJson .addBtn {
   display: none !important;
 }
-.olumJsonEditor .delBtn {
+.olumJson .delBtn {
   position: relative;
   margin: 0 0 0 10px;
   transition: none;
   opacity: 0;
 }
-.olumJsonEditor .string:hover .delBtn,
-.olumJsonEditor .boolean:hover .delBtn,
-.olumJsonEditor .number:hover .delBtn,
-.olumJsonEditor .null:hover .delBtn,
-.olumJsonEditor .undefined:hover .delBtn {
+.olumJson .string:hover .delBtn,
+.olumJson .boolean:hover .delBtn,
+.olumJson .number:hover .delBtn,
+.olumJson .null:hover .delBtn,
+.olumJson .undefined:hover .delBtn {
   opacity: 1;
 }
 
-.olumJsonEditor .delBtn::after {
+.olumJson .delBtn::after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="%23f25056"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
   left: 0;
   top: 0;
@@ -164,68 +164,68 @@ html {
   text-align: center;
 }
 
-.olumJsonEditor span.boolean {
+.olumJson span.boolean {
   color: var(--booleanColor);
 }
 
-.olumJsonEditor span.number {
+.olumJson span.number {
   color: var(--numberColor);
 }
 
-.olumJsonEditor span.null {
+.olumJson span.null {
   color: var(--nullColor);
 }
 
-.olumJsonEditor span.undefined {
+.olumJson span.undefined {
   color: var(--undefinedColor);
 }
 
-.olumJsonEditor span.string {
+.olumJson span.string {
   color: var(--stringColor);
 }
 
-.olumJsonEditor span.string .quotes {
+.olumJson span.string .quotes {
   color: var(--quotesColor);
   padding: 0;
 }
 
-.olumJsonEditor span.array {
+.olumJson span.array {
   color: var(--arrayColor);
 }
 
-.olumJsonEditor span.object {
+.olumJson span.object {
   color: var(--objectColor);
 }
 
-.olumJsonEditor span.array,
-.olumJsonEditor span.object {
+.olumJson span.array,
+.olumJson span.object {
   cursor: pointer;
 }
 
-.olumJsonEditor span.array .length,
-.olumJsonEditor span.object .length {
+.olumJson span.array .length,
+.olumJson span.object .length {
   pointer-events: none;
   color: var(--lengthColor);
   margin-left: 5px;
 }
 
-.olumJsonEditor span.array .length .bracket,
-.olumJsonEditor span.object .length .bracket {
+.olumJson span.array .length .bracket,
+.olumJson span.object .length .bracket {
   color: var(--bracketColor);
   padding: 0;
 }
 
-.olumJsonEditor .caret {
+.olumJson .caret {
   overflow: hidden;
   height: 30px;
   transition: background 0.1s ease-in-out, height 0.3s ease-in-out;
 }
 
-.olumJsonEditor span.prop {
+.olumJson span.prop {
   position: relative;
 }
 
-.olumJsonEditor span.collapse {
+.olumJson span.collapse {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -236,29 +236,29 @@ html {
   /* background-color: var(--mainBgColor); */
   z-index: 2;
 }
-.olumJsonEditor span.collapse svg {
+.olumJson span.collapse svg {
   pointer-events: none;
   width: 100%;
   height: 100%;
   fill: var(--collapseColor);
 }
 
-.olumJsonEditor .arrayGroup {
+.olumJson .arrayGroup {
   margin: 5px 0;
 }
 
-.olumJsonEditor .arrayGroup span.index {
+.olumJson .arrayGroup span.index {
   display: block;
 }
-.olumJsonEditor .arrayGroup span.null {
+.olumJson .arrayGroup span.null {
   color: var(--nullColor);
 }
 
-.olumJsonEditor .arrayGroup span.undefined {
+.olumJson .arrayGroup span.undefined {
   color: var(--undefinedColor);
 }
-.olumJsonEditor .arrayGroup span.item,
-.olumJsonEditor span.item {
+.olumJson .arrayGroup span.item,
+.olumJson span.item {
   color: var(--propColor);
 }
 
@@ -267,7 +267,7 @@ html {
   padding-left: 20px !important;
 }
 
-.olumJsonEditor > .line {
+.olumJson > .line {
   padding-left: 20px !important;
 }
 

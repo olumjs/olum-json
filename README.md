@@ -1,11 +1,11 @@
-# olum-jsonEditor
+# olum-json
 
-A vanilla code for displaying and modifying json
+A vanilla library for displaying and modifying json, made for olum devtool project
 
 <p align="center">
- <a href="https://www.npmjs.com/package/olum-jsonEditor" target="_blank"><img src="https://img.shields.io/npm/v/olum-jsonEditor" alt="npm"></a>
- <img src="https://img.shields.io/npm/dm/olum-jsonEditor" alt="npm">
- <img src="https://img.shields.io/npm/l/olum-jsonEditor" alt="npm">
+ <a href="https://www.npmjs.com/package/olum-json" target="_blank"><img src="https://img.shields.io/npm/v/olum-json" alt="npm"></a>
+ <img src="https://img.shields.io/npm/dm/olum-json" alt="npm">
+ <img src="https://img.shields.io/npm/l/olum-json" alt="npm">
 </p>
 
 # Documentation
@@ -19,17 +19,17 @@ A vanilla code for displaying and modifying json
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/olum-jsonEditor@latest/dist/styles/index.css" />
-    <link rel="stylesheet" href="https://unpkg.com/olum-jsonEditor@latest/dist/styles/themes/materialPalenight.css" />
-    <title>Olum jsonEditor</title>
+    <link rel="stylesheet" href="https://unpkg.com/olum-json@latest/dist/styles/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/olum-json@latest/dist/styles/themes/materialPalenight.css" />
+    <title>Olum Json</title>
   </head>
 
   <body>
-    <main class="olumJsonEditor"></main>
+    <main class="olumJson"></main>
 
-    <script src="https://unpkg.com/olum-jsonEditor@latest/dist/olum-jsonEditor.min.js"></script>
+    <script src="https://unpkg.com/olum-json@latest/dist/olum-json.min.js"></script>
     <script>
-      const jsonEditor = new OlumJsonEditor();
+      const json = new OlumJson();
       const data = {
         id: 9,
         title: "Infinix INBOOK",
@@ -49,7 +49,7 @@ A vanilla code for displaying and modifying json
           "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
         ],
       };
-      jsonEditor.render(document.querySelector(".olumJsonEditor"), data);
+      json.render(document.querySelector(".olumJson"), data);
     </script>
   </body>
 </html>
@@ -58,9 +58,9 @@ A vanilla code for displaying and modifying json
 ### ES6 Module
 
 ```javascript
-import OlumJsonEditor from "olum-jsonEditor";
+import OlumJson from "olum-json";
 
-const jsonEditor = new OlumJsonEditor();
+const json = new OlumJson();
 const data = {
   id: 9,
   title: "Infinix INBOOK",
@@ -80,6 +80,6 @@ const data = {
     "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
   ],
 };
-jsonEditor.render(document.querySelector(".olumJsonEditor"), data);
+json.render(document.querySelector(".olumJson"), data);
 
 ```

@@ -7,7 +7,7 @@ const pkgJSON = require("./package.json");
 
 const comment = 
 `/**
-* @name olum-jsonEditor
+* @name olum-json
 * @version ${pkgJSON.version}
 * @copyright 2022
 * @author Eissa Saber
@@ -17,14 +17,14 @@ const comment =
 
 gulp.task("compile", () => {
   return gulp
-    .src("./src/olum-jsonEditor.js")
-    .pipe(concat("olum-jsonEditor.min.js"))
+    .src("./src/olum-json.js")
+    .pipe(concat("olum-json.min.js"))
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(uglify())
     .pipe(header(comment))
     .pipe(gulp.dest("dist"));
 });
-gulp.task("copyJs", () => gulp.src(["./src/olum-jsonEditor.js"]).pipe(gulp.dest("dist")));
+gulp.task("copyJs", () => gulp.src(["./src/olum-json.js"]).pipe(gulp.dest("dist")));
 gulp.task("copyCss", () => gulp.src(["./src/styles/**/*"]).pipe(gulp.dest("dist/styles")));
 
 gulp.task("default", gulp.series(["compile", "copyJs","copyCss"]));

@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/themes/materialPalenight.css" />
-    <title>Olum jsonEditor</title>
+    <title>Olum Json</title>
   </head>
 
   <body>
-    <main class="olumJsonEditor"></main>
+    <main class="olumJson"></main>
 
-    <script src="olum-jsonEditor.js"></script>
+    <script src="olum-json.js"></script>
     <script>
-      const jsonEditor = new OlumJsonEditor();
+      const instance = new OlumJson();
       const data = {
         id: 9,
         title: "Infinix INBOOK",
@@ -34,7 +34,7 @@
           "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
         ],
       };
-      jsonEditor.render(document.querySelector(".olumJsonEditor"), data);
+      instance.render(document.querySelector(".olumJson"), data);
     </script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 /**
- * @name olum-jsonEditor
+ * @name olum-json
  * @version 0.1.0
  * @copyright 2022
  * @author Eissa Saber
@@ -8,11 +8,11 @@
 (function (root, factory) {
   if (typeof module === "object" && module.exports) module.exports = factory();
   else if (typeof define === "function" && define.amd) define(factory);
-  else root.OlumJsonEditor = factory();
+  else root.OlumJson = factory();
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
 
-  function OlumJsonEditor(options) {
+  function OlumJson(options) {
     var $this = this;
 
     function buildTree(entryPoint, rootName) {
@@ -364,5 +364,5 @@
     }
   }
 
-  return OlumJsonEditor;
+  return OlumJson;
 });

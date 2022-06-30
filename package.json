@@ -1,8 +1,8 @@
 {
-  "name": "olum-jsonEditor",
+  "name": "olum-json",
   "version": "0.1.0",
-  "description": "A vanilla code for displaying and modifying json",
-  "main": "dist/olum-jsonEditor.js",
+  "description": "A vanilla library for displaying and modifying json, made for olum devtool project",
+  "main": "dist/olum-json.js",
   "directories": {
     "dist": "dist"
   },
@@ -11,21 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olumjs/olum-jsonEditor"
+    "url": "git+https://github.com/olumjs/olum-json"
   },
   "keywords": [
     "npm",
     "olum",
     "olumjs",
     "vanilla",
-    "jsonEditor"
+    "json"
   ],
   "author": "Eissa Saber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olumjs/olum-jsonEditor/issues"
+    "url": "https://github.com/olumjs/olum-json/issues"
   },
-  "homepage": "https://github.com/olumjs/olum-jsonEditor#readme",
+  "homepage": "https://github.com/olumjs/olum-json#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
