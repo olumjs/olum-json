@@ -1,0 +1,22 @@
+/* chrome light theme */
+:root {
+  --stringColor: #ca0008;
+  --propColor: #881280;
+  --numberColor: #4633a9;
+  --booleanColor: #4633a9;
+  --indentColor: #5f6368;
+  --nullColor: #90888b;
+  --undefinedColor: #90888b;
+  --colonColor: #202540;
+  --quotesColor: #ca0008;
+  --bracketColor: #202547;
+  --selectionBgColor: #bbddfb;
+  --mainBgColor: #fff;
+  --bgHoverColor: #e2eaf3;
+  --collapseColor: #5f6368;
+  --lengthColor: #202547;
+  --arrayColor: #202547;
+  --objectColor: #202547;
+  --inputCaretColor: #202124;
+  --removePropBtnBgColor: #e46274;
+}

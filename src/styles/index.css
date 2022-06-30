@@ -1,0 +1,323 @@
+::selection {
+  background: var(--selectionBgColor);
+  color: var(--selectionColor);
+}
+:root {
+  --indentBgOpacity: 0.5;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.4px;
+  background: var(--mainBgColor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[contenteditable] {
+  outline: none;
+  caret-color: var(--inputCaretColor);
+}
+
+.olumJsonEditor {
+  padding: 20px;
+  padding-left: 5px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.olumJsonEditor div.line {
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.olumJsonEditor .caret {
+  position: relative;
+}
+
+.olumJsonEditor .caret .indentation {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  /* start rainbow extension */
+  background: var(--indentColor);
+  width: 1px;
+  /* end rainbow extension */
+  height: calc(100% - 40px);
+  z-index: 1;
+  box-shadow: 1px 0 0 0 rgba(78, 85, 121, 0.44) inset;
+}
+
+.olumJsonEditor .caret .indentation[data-indent="0"] {
+  background: rgba(56, 60, 63, var(--indentBgOpacity));
+}
+.olumJsonEditor .caret .indentation[data-indent="1"] {
+  background: rgba(47, 60, 67, var(--indentBgOpacity));
+}
+.olumJsonEditor .caret .indentation[data-indent="2"] {
+  background: rgba(56, 51, 76, var(--indentBgOpacity));
+}
+.olumJsonEditor .caret .indentation[data-indent="3"] {
+  background: rgba(44, 59, 75, var(--indentBgOpacity));
+}
+
+.olumJsonEditor div.line .removeProp {
+  height: 22px;
+  border: 1px solid var(--removePropBtnBgColor);
+  background: var(--removePropBtnBgColor);
+  border-radius: 2px;
+  width: 22px;
+  margin-left: 10px;
+  color: var(--mainBgColor);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  top: -1px;
+  line-height: 22px;
+  visibility: hidden;
+}
+
+.olumJsonEditor div.line .removeProp svg {
+  pointer-events: none;
+}
+
+.olumJsonEditor div.line:hover {
+  background: var(--bgHoverColor);
+  transition: background 0.1s ease-in-out, height 0.3s ease-in-out;
+}
+
+.olumJsonEditor div.line:hover .collapse {
+  /* background: var(--bgHoverColor); */
+}
+
+.olumJsonEditor div.line:hover .removeProp {
+  visibility: visible;
+  transition: visibility 0.1s ease-in-out;
+}
+
+.olumJsonEditor span.prop {
+  color: var(--propColor);
+  user-select: text;
+}
+
+.olumJsonEditor .colon {
+  color: var(--colonColor);
+  padding: 0 3px;
+  margin-right: 5px;
+}
+
+.olumJsonEditor .saveBtn {
+  position: relative;
+  margin: 0 0 0 10px;
+  transition: none;
+  opacity: 0;
+}
+.olumJsonEditor .string:hover .saveBtn,
+.olumJsonEditor .boolean:hover .saveBtn,
+.olumJsonEditor .number:hover .saveBtn,
+.olumJsonEditor .null:hover .saveBtn,
+.olumJsonEditor .undefined:hover .saveBtn {
+  opacity: 1;
+}
+
+.olumJsonEditor .saveBtn::after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="%233bea49"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>');
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.olumJsonEditor .addBtn {
+  display: none !important;
+}
+.olumJsonEditor .delBtn {
+  position: relative;
+  margin: 0 0 0 10px;
+  transition: none;
+  opacity: 0;
+}
+.olumJsonEditor .string:hover .delBtn,
+.olumJsonEditor .boolean:hover .delBtn,
+.olumJsonEditor .number:hover .delBtn,
+.olumJsonEditor .null:hover .delBtn,
+.olumJsonEditor .undefined:hover .delBtn {
+  opacity: 1;
+}
+
+.olumJsonEditor .delBtn::after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="%23f25056"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.olumJsonEditor span.boolean {
+  color: var(--booleanColor);
+}
+
+.olumJsonEditor span.number {
+  color: var(--numberColor);
+}
+
+.olumJsonEditor span.null {
+  color: var(--nullColor);
+}
+
+.olumJsonEditor span.undefined {
+  color: var(--undefinedColor);
+}
+
+.olumJsonEditor span.string {
+  color: var(--stringColor);
+}
+
+.olumJsonEditor span.string .quotes {
+  color: var(--quotesColor);
+  padding: 0;
+}
+
+.olumJsonEditor span.array {
+  color: var(--arrayColor);
+}
+
+.olumJsonEditor span.object {
+  color: var(--objectColor);
+}
+
+.olumJsonEditor span.array,
+.olumJsonEditor span.object {
+  cursor: pointer;
+}
+
+.olumJsonEditor span.array .length,
+.olumJsonEditor span.object .length {
+  pointer-events: none;
+  color: var(--lengthColor);
+  margin-left: 5px;
+}
+
+.olumJsonEditor span.array .length .bracket,
+.olumJsonEditor span.object .length .bracket {
+  color: var(--bracketColor);
+  padding: 0;
+}
+
+.olumJsonEditor .caret {
+  overflow: hidden;
+  height: 30px;
+  transition: background 0.1s ease-in-out, height 0.3s ease-in-out;
+}
+
+.olumJsonEditor span.prop {
+  position: relative;
+}
+
+.olumJsonEditor span.collapse {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  transition: transform 0.1s ease, background 0s;
+  /* background-color: var(--mainBgColor); */
+  z-index: 2;
+}
+.olumJsonEditor span.collapse svg {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  fill: var(--collapseColor);
+}
+
+.olumJsonEditor .arrayGroup {
+  margin: 5px 0;
+}
+
+.olumJsonEditor .arrayGroup span.index {
+  display: block;
+}
+.olumJsonEditor .arrayGroup span.null {
+  color: var(--nullColor);
+}
+
+.olumJsonEditor .arrayGroup span.undefined {
+  color: var(--undefinedColor);
+}
+.olumJsonEditor .arrayGroup span.item,
+.olumJsonEditor span.item {
+  color: var(--propColor);
+}
+
+.object ~ .line,
+.array ~ .line {
+  padding-left: 20px !important;
+}
+
+.olumJsonEditor > .line {
+  padding-left: 20px !important;
+}
+
+.o-btn {
+  min-width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0 5px;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #242639;
+  background: linear-gradient(to bottom, #fcfcfc, #f4f4f4);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  transition: all 0.3s ease;
+}
+
+.o-btn:hover {
+  background: #ffffff;
+}
+
+.o-btn:active {
+  background: #2b80f1;
+  border-color: #2b80f1;
+  color: white;
+}
+
+.o-btn.close::after {
+  content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 24 24' stroke='%23fff' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12' /></svg>");
+}
+
+.o-btn:focus {
+  box-shadow: 0 0 0px 2px #8eb9ff;
+  border-color: #8eb9ff;
+}
+
+.o-btn.close {
+  position: relative;
+}
+.o-btn.close::after {
+  position: absolute;
+  content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' viewBox='0 0 24 24' stroke='%23666' stroke-width='2'><path stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12' /></svg>");
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  background: transparent;
+  box-sizing: border-box;
+  pointer-events: none;
+}

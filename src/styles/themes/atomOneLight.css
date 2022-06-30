@@ -1,0 +1,22 @@
+/* atom one light theme */
+:root {
+  --mainBgColor: #fafafa;
+  --selectionBgColor: #e4e5e5;
+  --indentColor: #b3b4b7;
+  --propColor: #e66559;
+  --inputCaretColor: #526fff;
+  --removePropBtnBgColor: #e46274;
+  --bgHoverColor: #f0f0f0;
+  --arrayColor: #383a42;
+  --objectColor: #383a42;
+  --colonColor: #a626a4;
+  --quotesColor: #60a95f;
+  --booleanColor: #b76b01;
+  --numberColor: #b76b01;
+  --nullColor: #b76b01;
+  --undefinedColor: #b76b01;
+  --stringColor: #60a95f;
+  --bracketColor: #383a42;
+  --lengthColor: #b76b01;
+  --collapseColor: #b3b4b7;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/themes/materialPalenight.css" />
+    <title>Olum jsonEditor</title>
+  </head>
+
+  <body>
+    <main class="olumJsonEditor"></main>
+
+    <script src="olum-jsonEditor.js"></script>
+    <script>
+      const jsonEditor = new OlumJsonEditor();
+      const data = {
+        id: 9,
+        title: "Infinix INBOOK",
+        description: "Infinix Inbook X1 Ci3 10th 8GB...",
+        price: 1099,
+        discountPercentage: 11.83,
+        rating: 4.54,
+        stock: 96,
+        brand: "Infinix",
+        category: "laptops",
+        thumbnail: "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
+        images: [
+          "https://dummyjson.com/image/i/products/9/1.jpg",
+          "https://dummyjson.com/image/i/products/9/2.png",
+          "https://dummyjson.com/image/i/products/9/3.png",
+          "https://dummyjson.com/image/i/products/9/4.jpg",
+          "https://dummyjson.com/image/i/products/9/thumbnail.jpg",
+        ],
+      };
+      jsonEditor.render(document.querySelector(".olumJsonEditor"), data);
+    </script>
+  </body>
+</html>

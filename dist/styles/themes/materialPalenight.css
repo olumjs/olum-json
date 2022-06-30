@@ -1,0 +1,22 @@
+/* community material palenight theme */
+:root {
+  --selectionBgColor: #424063;
+  --mainBgColor: #2b2a3e;
+  --inputCaretColor: #fad616;
+  --indentColor: #383d56;
+  --removePropBtnBgColor: #e46274;
+  --bgHoverColor: #1d1d2b;
+  --propColor: #a9a7cd;
+  --arrayColor: #82aaff;
+  --objectColor: #a9a7cd;
+  --colonColor: #8edaff;
+  --quotesColor: #8edaff;
+  --booleanColor: #f5896c;
+  --numberColor: #f5896c;
+  --nullColor: #f5896c;
+  --undefinedColor: #f5896c;
+  --stringColor: #bdf38f;
+  --bracketColor: #fae219;
+  --lengthColor: #f5896c;
+  --collapseColor: #c5c5c5;
+}

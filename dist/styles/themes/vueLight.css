@@ -1,0 +1,23 @@
+/* vue light theme */
+:root {
+  --mainBgColor: #ffffff;
+  --selectionBgColor: #3345db;
+  --selectionColor: #fff;
+  --collapseColor: #2c3e50;
+  --propColor: #8128e8;
+  --inputCaretColor: #44476e;
+  --indentColor: #2c3e50;
+  --removePropBtnBgColor: #e46274;
+  --bgHoverColor: transparent;
+  --arrayColor: #444444;
+  --objectColor: #444444;
+  --colonColor: #444444;
+  --quotesColor: #22223f;
+  --stringColor: #222222;
+  --booleanColor: #4a40cc;
+  --numberColor: #4a40cc;
+  --nullColor: #999bb3;
+  --undefinedColor: #999bb3;
+  --bracketColor: #44476e;
+  --lengthColor: #44476e;
+}

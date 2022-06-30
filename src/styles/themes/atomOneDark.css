@@ -1,0 +1,22 @@
+/* atom one dark theme */
+:root {
+  --collapseColor: #575c65;
+  --mainBgColor: #282c34;
+  --selectionBgColor: #3e4451;
+  --indentColor: #575c65;
+  --propColor: #e06c75;
+  --inputCaretColor: #528bff;
+  --removePropBtnBgColor: #e46274;
+  --bgHoverColor: #2c323c;
+  --arrayColor: #abb2bf;
+  --objectColor: #abb2bf;
+  --colonColor: #c678dd;
+  --quotesColor: #98c379;
+  --booleanColor: #cd9765;
+  --numberColor: #cd9765;
+  --nullColor: #cd9765;
+  --undefinedColor: #cd9765;
+  --stringColor: #98c379;
+  --bracketColor: #abb2bf;
+  --lengthColor: #cd9765;
+}
