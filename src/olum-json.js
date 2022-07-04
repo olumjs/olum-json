@@ -55,8 +55,8 @@
           str += `<span class="index boolean">`;
           str += `<span class="item prop" data-prop="${index}">${index}</span><span class="colon">:</span>`;
           str += `<span class="boolean"><span contenteditable data-path="${path}" data-type="boolean" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
           str += "</span>";
@@ -65,8 +65,8 @@
           str += `<span class="prop" data-prop="${key}">${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="boolean"><span contenteditable data-path="${path}" data-type="boolean" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
         }
@@ -80,8 +80,8 @@
           str += `<span class="index string">`;
           str += `<span class="item prop" data-prop="${index}">${index}</span><span class="colon">:</span>`;
           str += `<span class="string"><span class="quotes">"</span><span contenteditable data-path="${path}" data-type="string" data-prop="${key}">${val}</span><span class="quotes">"</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
           str += "</span>";
@@ -90,8 +90,8 @@
           str += `<span class="prop" data-prop="${key}">${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="string"><span class="quotes">"</span><span contenteditable data-path="${path}" data-type="string" data-prop="${key}">${val}</span><span class="quotes">"</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
         }
@@ -105,8 +105,8 @@
           str += `<span class="index number">`;
           str += `<span class="item prop" data-prop="${index}">${index}</span><span class="colon">:</span>`;
           str += `<span class="number"><span contenteditable data-path="${path}" data-type="number" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
           str += "</span>";
@@ -115,8 +115,8 @@
           str += `<span class="prop" data-prop="${key}">${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="number"><span contenteditable data-path="${path}" data-type="number" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
         }
@@ -130,8 +130,8 @@
           str += `<span class="index null">`;
           str += `<span class="item prop" data-prop="${index}">${index}</span><span class="colon">:</span>`;
           str += `<span class="null"><span contenteditable data-path="${path}" data-type="null" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
           str += "</span>";
@@ -140,8 +140,8 @@
           str += `<span class="prop" data-prop="${key}">${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="null"><span contenteditable data-path="${path}" data-type="null" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
         }
@@ -155,8 +155,8 @@
           str += `<span class="index undefined">`;
           str += `<span class="item prop" data-prop="${index}">${index}</span><span class="colon">:</span>`;
           str += `<span class="undefined"><span contenteditable data-path="${path}" data-type="undefined" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
 
           str += "</span>";
           str += "</span>";
@@ -165,9 +165,8 @@
           str += `<span class="prop" data-prop="${key}">${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="undefined"><span contenteditable data-path="${path}" data-type="undefined" data-prop="${key}">${val}</span>`;
-          str += "<button class='saveBtn o-btn'></button>";
-
-          str += "<button class='delBtn o-btn'></button>";
+          str += "<button class='saveBtn o-btn' tabindex='-1'></button>";
+          str += "<button class='delBtn o-btn' tabindex='-1'></button>";
           str += "</span>";
         }
         str += "</div>";
@@ -182,8 +181,8 @@
           str += `<span class="prop" data-prop="${key}"><span class='collapse'>${foo.rightIcon}</span>${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="array">Array<span class="length"><span class="bracket">(</span>${arr.length}<span class="bracket">)</span></span>
-            <button class='o-btn addBtn'></button>
-            <button class='o-btn delWrapperBtn'></button>
+            <button class='o-btn addBtn' tabindex='-1'></button>
+            <button class='o-btn delWrapperBtn' tabindex='-1'></button>
           </span>`;
 
           arr.forEach((item, index) => {
@@ -213,8 +212,8 @@
           str += `<span class="prop" data-prop="${key}"><span class='collapse'>${foo.rightIcon}</span>${key}</span>`;
           str += '<span class="colon">:</span>';
           str += `<span class="object">Object<span class="length"><span class="bracket">{</span>${keys.length}<span class="bracket">}</span></span>
-            <button class='o-btn addBtn'></button>
-            <button class='o-btn delWrapperBtn'></button>
+            <button class='o-btn addBtn' tabindex='-1'></button>
+            <button class='o-btn delWrapperBtn' tabindex='-1'></button>
           </span>`;
           keys.forEach(prop => {
             const val = obj[prop];
@@ -280,7 +279,7 @@
         const propName = sequence.pop(); // get dest prop name and remove it from the sequence
         const target = sequence.reduce((object, prop) => (object || {})[prop], obj);
         // console.warn({ sequence, target, propName, obj });
-        if (!(target && target[propName])) {
+        if (!(target && target.hasOwnProperty(propName))) {
           console.warn("wrong path! @ " + path);
           return null;
         }
@@ -412,7 +411,7 @@
                 const _line = div.querySelector(".line");
                 if (_line) {
                   if (isArray) target.push(val);
-                  else target[prop] = val;
+                  else target[key] = val;
                   formElm.replaceWith(_line);
                 }
               };
@@ -445,9 +444,10 @@
             const propPath = arr.reverse().join(".");
             let { obj, name } = getTargetObj(propPath, entryPoint);
             console.log({ obj, name, propPath });
-            if (obj[name]){
+            if (obj[name]) {
               console.warn("del");
               delete obj[name];
+              // $this.render($this.wrapper, $this.entryPoint, $this.rootName);
               parent.remove();
             }
             return;
@@ -477,11 +477,27 @@
             recursive(item);
             const propPath = arr.reverse().join(".");
             let { obj, name } = getTargetObj(propPath, entryPoint);
-            // console.log(propPath, obj);
+            // return console.log(propPath, obj, name);
 
             // delete and edit props
             if (obj && obj[name]) {
               if (status === "save") {
+                // todo handle convert any data type to any data type while saving
+                // let val = item.textContent.trim();
+                // if (val === "undefined") {
+                //   val = undefined;
+                // } else {
+                //   try {
+                //     // any data type other than undefined & string
+                //     val = JSON.parse(val);
+                //   } catch (err) {
+                //     val = val; // string
+                //   }
+                // }
+                // console.log({ val });
+                // obj[name] = val;
+                // $this.render($this.wrapper, $this.entryPoint, $this.rootName);
+
                 if (type === "string") {
                   obj[name] = item.textContent;
                 } else if (type === "boolean" || type === null) {
@@ -490,10 +506,20 @@
                   obj[name] = +item.textContent.trim();
                 }
               } else if (status === "delete") {
-                const line = btn.parentElement.parentElement;
+                const line = !Array.isArray(obj) ? btn.parentElement.parentElement : btn.parentElement.parentElement.parentElement;
                 if (line.classList.contains("line")) {
-                  delete obj[name];
-                  line.remove();
+                  if (Array.isArray(obj)) {
+                    if (obj[name]) { // todo update array indexes after removing | currently it works from last index to first
+                      obj.splice(+name, 1);
+                      $this.render($this.wrapper, $this.entryPoint, $this.rootName);
+                      // line.remove();
+                    }
+                  }
+                  else {
+                    delete obj[name];
+                    $this.render($this.wrapper, $this.entryPoint, $this.rootName);
+                    // line.remove();
+                  }
                 } else console.warn("Couldn't reach the .line class for deletion!");
               }
             }

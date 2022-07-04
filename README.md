@@ -83,7 +83,3 @@ const data = {
 json.render(document.querySelector(".olumJson"), data);
 
 ```
-
-
-# todos
-* fix error while deleting item in an array
