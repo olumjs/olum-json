@@ -1,6 +1,6 @@
 {
   "name": "olum-json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A vanilla library for displaying and modifying json, made for olum devtool project",
   "main": "dist/olum-json.js",
   "directories": {
